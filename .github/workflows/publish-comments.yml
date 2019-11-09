@@ -27,7 +27,7 @@ jobs:
           cat src/header.html > index.html
           find src/comments/ -name "*.html" | sort -r | xargs -I % cat % >> index.html
           cat src/footer.html >> index.html
-          #cp src/index.html ../src/index.html
+          cp src/index.html ../src/index.html
       - name: Push changes to repo
         env:
           TOKEN: ${{ secrets.PAGES_TOKEN }}
@@ -42,12 +42,3 @@ jobs:
           git status
           git commit -am "Add new comment"
           git push ${REMOTE} master
-
-      - name: Deploy to GH PAGES
-        uses: JamesIves/github-pages-deploy-action@releases/v2
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BASE_BRANCH: master # The branch the action should deploy from.
-          BRANCH: master # The branch the action should deploy to.
-          FOLDER: . # The folder the action should deploy.
-          BUILD_SCRIPT:
