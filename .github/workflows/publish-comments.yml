@@ -20,7 +20,7 @@ jobs:
           NO_TAGS=${COMMENT//[<>]/\`}
           FOLDER=src/comments
 
-          pirntf '%b\n'  "\r\n<div class=\"card\"><div class=\"card-body\">${NO_TAGS//$'\n'/\<\/p\>\<p\>}</p><p>${DATE}</div></div>\r\n" > ${FOLDER}/${ID}.html
+          printf '%b\n'  "\r\n<div class=\"card\"><div class=\"card-body\">${NO_TAGS//$'\n'/\<\/p\>\<p\>}</p><p>${DATE}</div></div>\r\n" > ${FOLDER}/${ID}.html
          #printf '%b\n' "\r\n<div class=\"comment\"><p>${AUTHOR} says:</p><p>${NO_TAGS//$'\n'/\<\/p\>\<p\>}</p><p>${DATE}</p></div>\r\n" > ${FOLDER}/${ID}.html
       - name: Assemble page
         run: |
