@@ -27,7 +27,7 @@ jobs:
           cat src/header.html > index.html
           find src/comments/ -name "*.html" | sort -r | xargs -I % cat % >> index.html
           cat src/footer.html >> index.html
-          cp src/index.html ../src/index.html
+          #cp src/index.html ../src/index.html
       - name: Push changes to repo
         env:
           TOKEN: ${{ secrets.PAGES_TOKEN }}
