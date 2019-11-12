@@ -6,7 +6,7 @@ Para añadir un comentario/publicación sólo tienes que comentar el siguiente i
 
 :pen: :book: [Escribir una "lamentación"](https://github.com/mrm8488/muro_lamentaciones_umu/issues/1)
 
-Después de crear la "lamentación" se ejecutará el [workflow](https://help.github.com/en/actions/automating-your-workflow-with-github-actions) que recompone la web y lo verás publicado en unos 30 segundos en la siguiente web:
+Después de crear la "lamentación" se ejecutará el [workflow](https://help.github.com/en/actions/automating-your-workflow-with-github-actions) :hammer: que recompone la web y lo verás publicado en unos 30 segundos en la siguiente web:
 
 [Ver la web](https://lamentacionesfium.netlify.com/)
 
